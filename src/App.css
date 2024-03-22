@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.calender{
+  width: 100vw;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  width: 100%;
+  /* background-color: red; */
+  height: 60px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(8, 148, 255);
+}
+.header button,select{
+  min-width: 40px;
+}
+.header select{
+  padding: 0 10px;
+}
+.daysOfWeek{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.daysOfWeek b{
+  border: 1px solid rgba(0, 0, 0, .1);
+  background-color: rgb(221, 221, 221);
+  padding: 15px;
+}
+.days{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-template-rows: repeat(5,1fr);
+  text-align: center;
+  /* height: 85%; */
+}
+.day,.empty{
+  padding: 10px 10px;
+  border: 2px solid rgba(129, 129, 129, .1);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100px;
+  margin: 3px;
 }
-
-.App-link {
-  color: #61dafb;
+.day:hover{
+  background-color: rgb(8, 148, 255);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.empty{
+  background-color: #f9f9f9;
+}
+.year::backdrop{
+  max-height: 150px;
+}
+.current{
+  background-color: rgb(237, 73, 32);
 }
